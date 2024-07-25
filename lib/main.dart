@@ -15,7 +15,6 @@ class Uygulamam extends StatefulWidget {
 class _UygulamamState extends State<Uygulamam> {
   void btnClick(String btnValueHolder) {
     print(btnValueHolder);
-    print("oldu");
   }
 
   @override
@@ -88,12 +87,11 @@ class _UygulamamState extends State<Uygulamam> {
                         textSize: 24,
                         click: btnClick),
                     CalculatorButton(
-                      texts: '8',
-                      buttonBgColor: 0xFFFF5722,
-                      textColor: 0xFF000000,
-                      textSize: 24,
-                      click: btnClick('dene'),
-                    ),
+                        texts: '8',
+                        buttonBgColor: 0xFFFF5722,
+                        textColor: 0xFF000000,
+                        textSize: 24,
+                        click: btnClick),
                     CalculatorButton(
                         texts: '7',
                         buttonBgColor: 0xFFFF5722,

@@ -28,7 +28,9 @@ class CalculatorButton extends StatelessWidget {
               backgroundColor: Color(buttonBgColor),
               minimumSize: const Size(75, 75),
             ),
-            onPressed: () {},
+            onPressed: () => {
+              click(texts),
+            },
             child: Text(
               texts,
               style: TextStyle(
