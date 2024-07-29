@@ -1,4 +1,4 @@
-import 'package:first_app/screens/loginScreen.dart';
+import 'package:first_app/screens/main_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,11 +15,12 @@ class DriverApp extends StatefulWidget {
 class _DriverAppState extends State<DriverApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const Center(
-          child: LoginScreen(),
+        resizeToAvoidBottomInset: false,
+        body: Center(
+          child: MainPage(),
         ),
       ),
     );
