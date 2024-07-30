@@ -1,8 +1,13 @@
 import 'package:first_app/screens/main_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(DriverApp());
+  runApp(
+    const ProviderScope(
+      child: DriverApp(),
+    ),
+  );
 }
 
 class DriverApp extends StatefulWidget {

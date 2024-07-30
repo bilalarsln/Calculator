@@ -1,4 +1,4 @@
-import 'package:first_app/components/mainPage_button.dart';
+import 'package:first_app/components/main_button.dart';
 import 'package:first_app/screens/calculator.dart';
 import 'package:first_app/screens/loginScreen.dart';
 import 'package:first_app/screens/register_screen.dart';
@@ -29,33 +29,46 @@ class MainPage extends StatelessWidget {
         child: Column(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                MainpageButton(
+                MainButton(
+                    isRow: true,
                     btnText: "Login",
                     btnColor: Color.fromARGB(255, 255, 104, 17),
                     icon: Icons.send,
+                    btnBorderColor: Colors.black,
+                    btnBorderRadius: 2,
+                    btnHeight: 140,
+                    btnWidth: 140,
+                    btnPaddingHorizontal: 5,
+                    btnMarginHorizontal: 2,
+                    btnMarginVertical: 6,
+                    btnPaddingVertical: 3,
                     onPressed: () {
                       navigateTo(context, LoginScreen());
                     },
                     btnTextColor: Colors.white),
-                MainpageButton(
+                MainButton(
+                    isRow: false,
                     btnText: "Calculater",
                     btnColor: Color.fromARGB(255, 255, 104, 17),
                     icon: Icons.calculate,
+                    btnBorderColor: Colors.black,
+                    btnBorderRadius: 2,
+                    btnHeight: 140,
+                    btnWidth: 140,
+                    btnPaddingHorizontal: 5,
+                    btnMarginHorizontal: 2,
+                    btnMarginVertical: 6,
+                    btnPaddingVertical: 3,
                     onPressed: () {
                       navigateTo(context, Uygulamam());
                     },
                     btnTextColor: Colors.white),
-                MainpageButton(
-                    btnText: "Register",
-                    btnColor: Color.fromARGB(255, 255, 104, 17),
-                    icon: Icons.person,
-                    onPressed: () {
-                      navigateTo(context, RegisterScreen());
-                    },
-                    btnTextColor: Colors.white),
               ],
+            ),
+            const Text(
+              'No, we need bold strokes. We need this plan.',
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ],
         ),
