@@ -28,7 +28,7 @@ class RoundedButton extends StatelessWidget {
               backgroundColor: btnColor),
           child: Text(
             btnText,
-            style: AppTextStyle.MIDDLE_BUTTON_TEXT,
+            // style: AppTextStyle.MIDDLE_BUTTON_TEXT,
           ),
         ),
       ),

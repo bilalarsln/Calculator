@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:first_app/constant/screen_size.dart';
 
 class MainButton extends StatelessWidget {
   final String btnText;
@@ -7,7 +8,7 @@ class MainButton extends StatelessWidget {
   final double btnBorderRadius;
   final Color btnTextColor;
   final IconData? icon;
-  final double btnWidth;
+  final double withScaleFactor;
   final double btnHeight;
   final double btnMarginVertical;
   final double btnMarginHorizontal;
@@ -24,7 +25,7 @@ class MainButton extends StatelessWidget {
     required this.btnBorderRadius,
     required this.btnTextColor,
     this.icon,
-    required this.btnWidth,
+    required this.withScaleFactor,
     required this.btnHeight,
     required this.btnMarginVertical,
     required this.btnMarginHorizontal,
@@ -68,8 +69,11 @@ class MainButton extends StatelessWidget {
             );
     }
 
+    Size size = MediaQuery.of(context).size;
+    double screenWidth = size.width;
+    double width = ScreenSize.screenWidthControl(screenWidth);
     return Container(
-      width: btnWidth,
+      width: width * withScaleFactor,
       height: btnHeight,
       margin: EdgeInsets.symmetric(
         vertical: btnMarginVertical,
@@ -92,31 +96,4 @@ class MainButton extends StatelessWidget {
       ),
     );
   }
-
-  static int width = 580;
-  static double valueResult = 100;
-
-  double screenWidthControl(int width) {
-    if (width > 1920) {
-      return 750;
-    } else if (width > 1680 && width <= 1920) {
-      return valueResult = 650;
-    } else if (width > 1370 && width <= 1680) {
-      return 560;
-    } else if (width > 1280 && width <= 1370) {
-      return 520;
-    } else if (width > 1024 && width <= 1280) {
-      return 400;
-    } else if (width > 785 && width <= 1024) {
-      return 300;
-    } else if (width <= 785) {
-      return width * 0.8;
-    } else {
-      return width * 0.8;
-    }
-  }
-
-  // static final BTN_LARGE = ButtonStyle(
-  //   btnWidth : valueResult * 1.2;
-  // );
 }
