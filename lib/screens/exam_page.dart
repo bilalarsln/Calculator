@@ -24,9 +24,9 @@ class ExamPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Container(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 5),
-        margin: const EdgeInsets.symmetric(vertical: 2, horizontal: 5),
+        // margin: const EdgeInsets.symmetric(vertical: 2, horizontal: 5),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -36,14 +36,8 @@ class ExamPage extends StatelessWidget {
               width: double.infinity,
               fit: BoxFit.cover,
             ),
-            Flexible(
-              child: Text(
-                "Lorem Ipsum is fgd fgf dg mfdşg mfdş gşlfd kgş şg mfdş gşlfd kgş  fg dfgfdg mfdş fgdfgf  dgmfd şgmfd şgşl fdk fg dfgfdg mfdş fgdfgf  dgmfd şgmfd şgşl fdkgş  gmfdşgşlfdkgş  lfdkgşlfdkg şl fkdg şlkfdş lgkşl dfkg fdlkgşldkf şlfd ",
-                style: AppTextStyle.quizQuestionText(valueTextSize),
-                softWrap: true,
-                overflow: TextOverflow.visible,
-              ),
-            ),
+            Text(
+                "Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like) It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like) It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)is fgd fgf dg mfdşg mfdş gşlfd kgş şg mfdş gşlfd kgş  fg dfgfdg mfdş fgdfgf  dgmfd şgmfd Lorem Ipsum is fgd fgf dg mfdşg mfdş gşlfd kgş şg mfdş gşlfd kgş  fg dfgfdg mfdşfgf tggmfşşşdmfddfgşfgfdd fgişşfgddfgffdfggfdşdlşf"),
             const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -67,6 +61,9 @@ class ExamPage extends StatelessWidget {
                   onPressed: () {},
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 55,
             ),
           ],
         ),
