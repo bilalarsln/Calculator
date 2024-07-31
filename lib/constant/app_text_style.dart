@@ -1,5 +1,3 @@
-import 'package:first_app/constant/screen_size.dart';
-import 'package:first_app/constant/width.dart';
 import 'package:flutter/material.dart';
 
 class AppTextStyle {
@@ -12,12 +10,12 @@ class AppTextStyle {
     );
   }
 
-  static TextStyle middleButtonText(double width) {
+  static TextStyle buttonText(double width, Color textColor) {
     return TextStyle(
-      fontSize: width,
+      fontSize: width * 1.3,
       letterSpacing: 5,
-      color: Colors.white,
-      fontWeight: FontWeight.w500,
+      color: textColor,
+      fontWeight: FontWeight.w600,
     );
   }
 

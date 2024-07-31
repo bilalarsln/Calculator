@@ -1,3 +1,4 @@
+import 'package:first_app/constant/app_text_style.dart';
 import 'package:first_app/constant/screen_size.dart';
 import 'package:first_app/constant/width.dart';
 import 'package:flutter/material.dart';
@@ -39,9 +40,10 @@ class MainButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = Width(context);
-
     double valueResult =
         ScreenSize.screenWidthControl(screenWidth)['valueResult']!;
+    double valueTextSize =
+        ScreenSize.screenWidthControl(screenWidth)['valueTextSize']!;
 
     Widget place() {
       return isRow
@@ -55,7 +57,7 @@ class MainButton extends StatelessWidget {
                 ),
                 Text(
                   btnText,
-                  style: TextStyle(color: btnTextColor),
+                  style: AppTextStyle.buttonText(valueTextSize, btnTextColor),
                 ),
               ],
             )
@@ -69,7 +71,7 @@ class MainButton extends StatelessWidget {
                 ),
                 Text(
                   btnText,
-                  style: TextStyle(color: btnTextColor),
+                  style: AppTextStyle.buttonText(valueTextSize, btnTextColor),
                 ),
               ],
             );

@@ -1,6 +1,5 @@
-import 'package:first_app/constant/app_text_style.dart';
 import 'package:first_app/constant/buttons/buttons.dart';
-import 'package:first_app/constant/width.dart';
+
 import 'package:first_app/screens/loginScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +15,6 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = Width(context) as double; // Ekran boyutunu hesaplayın
-
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 63, 57, 56),
