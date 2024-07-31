@@ -2,20 +2,20 @@ import 'package:first_app/components/rounded_button.dart';
 import 'package:first_app/components/rounded_input_fields.dart';
 import 'package:first_app/components/square_box.dart';
 import 'package:first_app/constant/app_text_style.dart';
-import 'package:first_app/constant/screen_size.dart';
-
-//import 'package:first_app/screens/register_screen.dart';
+import 'package:first_app/constant/width.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:first_app/constant/screen_size.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    double screenWidth = size.width;
-    double screenBoyut = ScreenSize.screenWidthControl(screenWidth);
+    double screenWidth = Width(context);
+
+    double valueTextSize =
+        ScreenSize.screenWidthControl(screenWidth)['valueTextSize']!;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Stack(
@@ -70,8 +70,8 @@ class LoginScreen extends StatelessWidget {
                         ),
                         Text(
                           "Forget your password?",
-                          style:
-                              AppTextStyle.miniBoldDescriptionText(screenBoyut),
+                          style: AppTextStyle.miniBoldDescriptionText(
+                              valueTextSize),
                         ),
                         RoundedButton(
                           btnText: "LOGIN",
@@ -98,7 +98,7 @@ class LoginScreen extends StatelessWidget {
                       child: Text(
                         "Or Continue With",
                         style:
-                            AppTextStyle.miniBoldDescriptionText(screenBoyut),
+                            AppTextStyle.MINI_DESCRIPTION_TEXT(valueTextSize),
                       ),
                     ),
                     Expanded(
@@ -130,7 +130,7 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Not a Member?",
-                    style: AppTextStyle.miniBoldDescriptionText(screenBoyut),
+                    style: AppTextStyle.miniBoldDescriptionText(valueTextSize),
                   ),
                   TextButton(
                     onPressed: () {
@@ -142,7 +142,8 @@ class LoginScreen extends StatelessWidget {
                     },
                     child: Text(
                       " Register Now",
-                      style: AppTextStyle.miniBoldDescriptionText(screenBoyut),
+                      style:
+                          AppTextStyle.miniBoldDescriptionText(valueTextSize),
                     ),
                   ),
                   const SizedBox(

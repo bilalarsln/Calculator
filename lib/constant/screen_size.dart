@@ -1,35 +1,46 @@
-// screen_util.dart
-import 'package:flutter/material.dart';
-
 class ScreenSize {
   static double valueResult = 100;
+  static double valueTextSize = 100;
 
-  static double screenWidthControl(double width) {
+  static Map<String, double> screenWidthControl(double width) {
     if (width > 1920) {
-      valueResult = 750;
+      valueResult = width * 0.7;
+      valueTextSize = 20;
     } else if (width > 1680 && width <= 1920) {
-      valueResult = 650;
+      valueResult = width * 0.7;
+      valueTextSize = 18;
     } else if (width > 1370 && width <= 1680) {
-      valueResult = 560;
+      valueResult = width * 0.7;
+      valueTextSize = 16;
     } else if (width > 1280 && width <= 1370) {
-      valueResult = 520;
+      valueResult = width * 0.7;
+      valueTextSize = 14;
     } else if (width > 1024 && width <= 1280) {
-      valueResult = 400;
+      valueResult = width * 0.7;
+      valueTextSize = 12;
     } else if (width > 785 && width <= 1024) {
-      valueResult = 300;
+      valueResult = width * 0.7;
+      valueTextSize = 10;
     } else if (width > 640 && width <= 785) {
-      valueResult = 250;
+      valueResult = width * 0.7;
+      valueTextSize = 9;
     } else if (width > 480 && width <= 640) {
-      valueResult = 200;
+      valueResult = width * 0.7;
+      valueTextSize = 8;
     } else if (width > 360 && width <= 480) {
-      valueResult = 0.8;
+      valueResult = width * 0.7;
+      valueTextSize = 7;
     } else if (width <= 360) {
-      valueResult = width * 0.6;
+      valueResult = width * 0.7;
+      valueTextSize = 6;
     } else {
-      valueResult = width * 0.8;
+      valueResult = width * 0.7;
+      valueTextSize = 10;
     }
 
-    debugPrint('valueResult: $valueResult');
-    return valueResult;
+    return {
+      'valueResult': valueResult,
+      'valueTextSize': valueTextSize,
+    };
   }
 }

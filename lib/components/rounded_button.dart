@@ -1,4 +1,3 @@
-import 'package:first_app/constant/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {
@@ -17,7 +16,7 @@ class RoundedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       width: size.width * 0.8,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),

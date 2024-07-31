@@ -29,7 +29,5 @@ class _DriverAppState extends State<DriverApp> {
         ),
       ),
     );
-
-    // Uygulamam()
   }
 }

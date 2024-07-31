@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:first_app/constant/screen_size.dart';
+import 'package:first_app/constant/width.dart';
+import 'package:flutter/material.dart';
 
 class MainButton extends StatelessWidget {
   final String btnText;
@@ -37,6 +38,11 @@ class MainButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = Width(context);
+
+    double valueResult =
+        ScreenSize.screenWidthControl(screenWidth)['valueResult']!;
+
     Widget place() {
       return isRow
           ? Row(
@@ -69,11 +75,8 @@ class MainButton extends StatelessWidget {
             );
     }
 
-    Size size = MediaQuery.of(context).size;
-    double screenWidth = size.width;
-    double width = ScreenSize.screenWidthControl(screenWidth);
     return Container(
-      width: width * withScaleFactor,
+      width: valueResult * withScaleFactor,
       height: btnHeight,
       margin: EdgeInsets.symmetric(
         vertical: btnMarginVertical,

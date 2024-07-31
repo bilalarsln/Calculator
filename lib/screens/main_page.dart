@@ -1,6 +1,6 @@
-import 'package:first_app/components/main_button.dart';
-import 'package:first_app/constant/buttons/small_button.dart';
-import 'package:first_app/screens/calculator.dart';
+import 'package:first_app/constant/app_text_style.dart';
+import 'package:first_app/constant/buttons/buttons.dart';
+import 'package:first_app/constant/width.dart';
 import 'package:first_app/screens/loginScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +16,8 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = Width(context) as double; // Ekran boyutunu hesaplayın
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 63, 57, 56),
@@ -40,49 +42,25 @@ class MainPage extends StatelessWidget {
                     }),
                 MidButton(
                     btnText: "Mid",
-                    btnHeight: 100,
+                    btnHeight: 80,
                     btnBorderRadius: 30,
                     icon: Icons.admin_panel_settings,
                     onPressed: () {
                       navigateTo(context, LoginScreen());
                     }),
-                // MainButton(
-                //     isRow: true,
-                //     btnText: "Login",
-                //     btnColor: Color.fromARGB(255, 255, 104, 17),
-                //     icon: Icons.send,
-                //     btnBorderColor: Colors.black,
-                //     btnBorderRadius: 2,
-                //     btnHeight: 140,
-                //     btnPaddingHorizontal: 5,
-                //     btnMarginHorizontal: 2,
-                //     btnMarginVertical: 6,
-                //     btnPaddingVertical: 3,
-                //     onPressed: () {
-                //       navigateTo(context, LoginScreen());
-                //     },
-                //     btnTextColor: Colors.white),
-                // MainButton(
-                //     isRow: false,
-                //     btnText: "Calculater",
-                //     btnColor: Color.fromARGB(255, 255, 104, 17),
-                //     icon: Icons.calculate,
-                //     btnBorderColor: Colors.black,
-                //     btnBorderRadius: 2,
-                //     btnHeight: 140,
-                //     btnPaddingHorizontal: 5,
-                //     btnMarginHorizontal: 2,
-                //     btnMarginVertical: 6,
-                //     btnPaddingVertical: 3,
-                //     onPressed: () {
-                //       navigateTo(context, Uygulamam());
-                //     },
-                //     btnTextColor: Colors.white),
               ],
             ),
-            const Text(
-              'No, we need bold strokes. We need this plan.',
-              style: TextStyle(fontWeight: FontWeight.bold),
+            Row(
+              children: [
+                LargeButton(
+                    btnText: "Large",
+                    btnHeight: 80,
+                    btnBorderRadius: 30,
+                    icon: Icons.admin_panel_settings,
+                    onPressed: () {
+                      navigateTo(context, LoginScreen());
+                    }),
+              ],
             ),
           ],
         ),
