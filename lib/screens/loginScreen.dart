@@ -13,7 +13,6 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = Width(context);
-
     double valueTextSize =
         ScreenSize.screenWidthControl(screenWidth)['valueTextSize']!;
     return Scaffold(

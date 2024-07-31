@@ -1,4 +1,6 @@
+import 'package:first_app/screens/exam_page.dart';
 import 'package:first_app/screens/loginScreen.dart';
+import 'package:first_app/screens/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
@@ -22,7 +24,9 @@ class DriverApp extends StatelessWidget {
         ),
       ),
       routes: {
-        "/minimal": (context) => const LoginScreen(),
+        "/Login": (context) => const LoginScreen(),
+        "/MainPage": (context) => const MainPage(),
+        "/Exam": (context) => const ExamPage(),
       },
     );
   }
@@ -36,21 +40,21 @@ class PersistenBottomNavBarDemo extends StatelessWidget {
           screen: const LoginScreen(),
           item: ItemConfig(
             icon: const Icon(Icons.home),
-            title: "Home",
+            title: "Login",
           ),
         ),
         PersistentTabConfig(
-          screen: const LoginScreen(),
+          screen: const MainPage(),
           item: ItemConfig(
             icon: const Icon(Icons.message),
-            title: "Messages",
+            title: "MainPage",
           ),
         ),
         PersistentTabConfig(
-          screen: const LoginScreen(),
+          screen: const ExamPage(),
           item: ItemConfig(
             icon: const Icon(Icons.settings),
-            title: "Settings",
+            title: "Exam",
           ),
         ),
       ];

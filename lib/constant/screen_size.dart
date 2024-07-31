@@ -20,22 +20,22 @@ class ScreenSize {
       valueTextSize = 12;
     } else if (width > 785 && width <= 1024) {
       valueResult = width * 0.7;
-      valueTextSize = 10;
+      valueTextSize = 11;
     } else if (width > 640 && width <= 785) {
       valueResult = width * 0.7;
-      valueTextSize = 9;
+      valueTextSize = 12;
     } else if (width > 480 && width <= 640) {
       valueResult = width * 0.7;
-      valueTextSize = 8;
+      valueTextSize = 11;
     } else if (width > 360 && width <= 480) {
       valueResult = width * 0.7;
-      valueTextSize = 7;
+      valueTextSize = 11;
     } else if (width <= 360) {
       valueResult = width * 0.7;
-      valueTextSize = 6;
+      valueTextSize = 11;
     } else {
       valueResult = width * 0.7;
-      valueTextSize = 10;
+      valueTextSize = 11;
     }
 
     return {

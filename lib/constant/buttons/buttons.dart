@@ -108,3 +108,34 @@ class LargeButton extends StatelessWidget {
         onPressed: onPressed);
   }
 }
+
+class QuizChoiceButton extends StatelessWidget {
+  final String btnText;
+
+  final Function()? onPressed;
+
+  const QuizChoiceButton({
+    super.key,
+    required this.btnText,
+    this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return MainButton(
+      btnText: btnText,
+      btnColor: const Color.fromARGB(255, 160, 160, 160),
+      btnBorderColor: const Color.fromARGB(255, 76, 76, 76),
+      btnBorderRadius: 30,
+      withScaleFactor: 1.3,
+      btnTextColor: const Color.fromARGB(255, 255, 255, 255),
+      btnHeight: 35,
+      btnMarginVertical: 5,
+      btnMarginHorizontal: 2,
+      btnPaddingVertical: 2,
+      btnPaddingHorizontal: 2,
+      isRow: false,
+      onPressed: () {},
+    );
+  }
+}

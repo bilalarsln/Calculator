@@ -42,6 +42,15 @@ class AppTextStyle {
     );
   }
 
+  static TextStyle quizQuestionText(double width) {
+    return TextStyle(
+      fontSize: width * 1.5,
+      color: Colors.black,
+      fontWeight: FontWeight.w600,
+      letterSpacing: 1,
+    );
+  }
+
   static TextStyle MINI_DESCRIPTION_TEXT(double width) {
     return TextStyle(fontSize: width, color: Colors.black, letterSpacing: 3);
   }
