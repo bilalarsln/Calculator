@@ -31,7 +31,6 @@ class MainPage extends StatelessWidget {
               children: [
                 SmallButton(
                     btnText: "Loginnn",
-                    btnHeight: 80,
                     icon: Icons.admin_panel_settings,
                     btnBorderRadius: 15,
                     onPressed: () {
@@ -39,7 +38,6 @@ class MainPage extends StatelessWidget {
                     }),
                 MidButton(
                     btnText: "Mid",
-                    btnHeight: 80,
                     btnBorderRadius: 30,
                     icon: Icons.admin_panel_settings,
                     onPressed: () {
@@ -51,7 +49,6 @@ class MainPage extends StatelessWidget {
               children: [
                 LargeButton(
                     btnText: "Large",
-                    btnHeight: 80,
                     btnBorderRadius: 30,
                     icon: Icons.admin_panel_settings,
                     onPressed: () {

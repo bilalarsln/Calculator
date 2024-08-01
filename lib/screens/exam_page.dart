@@ -16,6 +16,7 @@ class ExamPage extends StatelessWidget {
         ScreenSize.screenWidthControl(screenWidth)['valueTextSize']!;
     double valueResult =
         ScreenSize.screenWidthControl(screenWidth)['valueResult']!;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepOrange,
@@ -28,7 +29,7 @@ class ExamPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 2, horizontal: 5),
-          margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+          margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -56,18 +57,17 @@ class ExamPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedboxRatio.sizedBoxWithScale(valueResult, 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   MidButton(
                     btnText: "Cevap",
                     btnBorderRadius: 30,
-                    btnHeight: 35,
                     onPressed: () {},
                   ),
                 ],
               ),
+              SizedboxRatio.sizedBoxWithScale(valueResult, 70),
             ],
           ),
         ),
