@@ -4,10 +4,10 @@ class ScreenSize {
 
   static Map<String, double> screenWidthControl(double width) {
     if (width > 1920) {
-      valueResult = width * 0.7;
-      valueTextSize = 20;
+      valueResult = width * 0.4;
+      valueTextSize = 35;
     } else if (width > 1680 && width <= 1920) {
-      valueResult = width * 0.7;
+      valueResult = width * 0.4;
       valueTextSize = 18;
     } else if (width > 1370 && width <= 1680) {
       valueResult = width * 0.7;

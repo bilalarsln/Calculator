@@ -24,8 +24,8 @@ class DriverApp extends StatelessWidget {
         ),
       ),
       routes: {
-        "/Login": (context) => const LoginScreen(),
-        "/MainPage": (context) => const MainPage(),
+        "/Login": (context) => const MainPage(),
+        "/MainPage": (context) => const LoginScreen(),
         "/Exam": (context) => const ExamPage(),
       },
     );
