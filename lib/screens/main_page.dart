@@ -3,6 +3,7 @@ import 'package:first_app/constant/navigate_to.dart';
 import 'package:first_app/screens/exams/unitList.dart';
 import 'package:first_app/screens/loginScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -19,55 +20,103 @@ class MainPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Wrap(
-          spacing: 10.0, // Butonlar arasındaki yatay boşluk
-          runSpacing: 10.0, // Satırlar arasındaki dikey boşluk
-          children: [
-            MidButton(
-                btnText: "Testler",
-                btnBorderRadius: 30,
-                icon: Icons.admin_panel_settings,
-                onPressed: () {
-                  navigateTo(context, Unitlist());
-                }),
-            MidButton(
-                btnText: "Kaynaklar",
-                btnBorderRadius: 30,
-                icon: Icons.admin_panel_settings,
-                onPressed: () {
-                  navigateTo(context, Unitlist());
-                }),
-            MidButton(
-                btnText: "Duyurular",
-                btnBorderRadius: 30,
-                icon: Icons.admin_panel_settings,
-                onPressed: () {
-                  navigateTo(context, Unitlist());
-                }),
-            MidButton(
-                btnText: "Önemli Bilgiler",
-                btnBorderRadius: 30,
-                icon: Icons.admin_panel_settings,
-                onPressed: () {
-                  navigateTo(context, Unitlist());
-                }),
-            MidButton(
-                btnText: "İletişim",
-                btnBorderRadius: 30,
-                icon: Icons.admin_panel_settings,
-                onPressed: () {
-                  navigateTo(context, Unitlist());
-                }),
-            MidButton(
-                btnText: "Giriş Yap",
-                btnBorderRadius: 30,
-                icon: Icons.admin_panel_settings,
-                onPressed: () {
-                  navigateTo(context, LoginScreen());
-                }),
-          ],
+        child: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: [
+                SliderImg(),
+                Wrap(
+                  spacing: 10.0, // Butonlar arasındaki yatay boşluk
+                  runSpacing: 10.0, // Satırlar arasındaki dikey boşluk
+                  children: [
+                    MidButton(
+                        btnText: "Testler",
+                        btnBorderRadius: 30,
+                        icon: Icons.admin_panel_settings,
+                        onPressed: () {
+                          navigateTo(context, Unitlist());
+                        }),
+                    MidButton(
+                        btnText: "Kaynaklar",
+                        btnBorderRadius: 30,
+                        icon: Icons.admin_panel_settings,
+                        onPressed: () {
+                          navigateTo(context, Unitlist());
+                        }),
+                    MidButton(
+                        btnText: "Duyurular",
+                        btnBorderRadius: 30,
+                        icon: Icons.admin_panel_settings,
+                        onPressed: () {
+                          navigateTo(context, Unitlist());
+                        }),
+                    MidButton(
+                        btnText: "Önemli Bilgiler",
+                        btnBorderRadius: 30,
+                        icon: Icons.admin_panel_settings,
+                        onPressed: () {
+                          navigateTo(context, Unitlist());
+                        }),
+                    MidButton(
+                        btnText: "İletişim",
+                        btnBorderRadius: 30,
+                        icon: Icons.admin_panel_settings,
+                        onPressed: () {
+                          navigateTo(context, Unitlist());
+                        }),
+                    MidButton(
+                        btnText: "Giriş Yap",
+                        btnBorderRadius: 30,
+                        icon: Icons.admin_panel_settings,
+                        onPressed: () {
+                          navigateTo(context, LoginScreen());
+                        }),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ),
       ),
+    );
+  }
+}
+
+class SliderImg extends StatelessWidget {
+  const SliderImg({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return CarouselSlider(
+      options: CarouselOptions(
+        height: 200.0,
+        autoPlay: true,
+        autoPlayInterval: const Duration(
+          seconds: 3,
+        ),
+      ),
+      items: [1, 2, 3, 4, 5].map((i) {
+        return Builder(
+          builder: (BuildContext context) {
+            return Container(
+                width: MediaQuery.of(context).size.width,
+                margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "assets/images/$i.png",
+                    ),
+                  ),
+                ),
+                child: Text(
+                  'text $i',
+                  style: const TextStyle(fontSize: 16.0),
+                ));
+          },
+        );
+      }).toList(),
     );
   }
 }

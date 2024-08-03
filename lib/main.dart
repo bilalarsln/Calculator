@@ -34,27 +34,26 @@ class DriverApp extends StatelessWidget {
 
 class PersistenBottomNavBarDemo extends StatelessWidget {
   const PersistenBottomNavBarDemo({super.key});
-
   List<PersistentTabConfig> _tabs() => [
         PersistentTabConfig(
-          screen: const LoginScreen(),
+          screen: const SafeArea(child: MainPage()),
           item: ItemConfig(
             icon: const Icon(Icons.home),
-            title: "Login",
+            title: "Ana Sayfa",
           ),
         ),
         PersistentTabConfig(
-          screen: const MainPage(),
+          screen: const SafeArea(child: LoginScreen()),
           item: ItemConfig(
             icon: const Icon(Icons.message),
             title: "MainPage",
           ),
         ),
         PersistentTabConfig(
-          screen: const ExamPage(),
+          screen: const SafeArea(child: LoginScreen()),
           item: ItemConfig(
             icon: const Icon(Icons.settings),
-            title: "Exam",
+            title: "Giriş",
           ),
         ),
       ];
