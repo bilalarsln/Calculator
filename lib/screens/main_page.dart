@@ -1,17 +1,11 @@
 import 'package:first_app/constant/buttons/buttons.dart';
-
+import 'package:first_app/constant/navigate_to.dart';
+import 'package:first_app/screens/exams/unitList.dart';
 import 'package:first_app/screens/loginScreen.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
-
-  void navigateTo(BuildContext context, Widget screen) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => screen),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,37 +19,52 @@ class MainPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
+        child: Wrap(
+          spacing: 10.0, // Butonlar arasındaki yatay boşluk
+          runSpacing: 10.0, // Satırlar arasındaki dikey boşluk
           children: [
-            Row(
-              children: [
-                SmallButton(
-                    btnText: "Loginnn",
-                    icon: Icons.admin_panel_settings,
-                    btnBorderRadius: 15,
-                    onPressed: () {
-                      navigateTo(context, LoginScreen());
-                    }),
-                MidButton(
-                    btnText: "Mid",
-                    btnBorderRadius: 30,
-                    icon: Icons.admin_panel_settings,
-                    onPressed: () {
-                      navigateTo(context, LoginScreen());
-                    }),
-              ],
-            ),
-            Row(
-              children: [
-                LargeButton(
-                    btnText: "Large",
-                    btnBorderRadius: 30,
-                    icon: Icons.admin_panel_settings,
-                    onPressed: () {
-                      navigateTo(context, LoginScreen());
-                    }),
-              ],
-            ),
+            MidButton(
+                btnText: "Testler",
+                btnBorderRadius: 30,
+                icon: Icons.admin_panel_settings,
+                onPressed: () {
+                  navigateTo(context, Unitlist());
+                }),
+            MidButton(
+                btnText: "Kaynaklar",
+                btnBorderRadius: 30,
+                icon: Icons.admin_panel_settings,
+                onPressed: () {
+                  navigateTo(context, Unitlist());
+                }),
+            MidButton(
+                btnText: "Duyurular",
+                btnBorderRadius: 30,
+                icon: Icons.admin_panel_settings,
+                onPressed: () {
+                  navigateTo(context, Unitlist());
+                }),
+            MidButton(
+                btnText: "Önemli Bilgiler",
+                btnBorderRadius: 30,
+                icon: Icons.admin_panel_settings,
+                onPressed: () {
+                  navigateTo(context, Unitlist());
+                }),
+            MidButton(
+                btnText: "İletişim",
+                btnBorderRadius: 30,
+                icon: Icons.admin_panel_settings,
+                onPressed: () {
+                  navigateTo(context, Unitlist());
+                }),
+            MidButton(
+                btnText: "Giriş Yap",
+                btnBorderRadius: 30,
+                icon: Icons.admin_panel_settings,
+                onPressed: () {
+                  navigateTo(context, LoginScreen());
+                }),
           ],
         ),
       ),

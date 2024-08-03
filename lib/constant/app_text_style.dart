@@ -12,7 +12,7 @@ class AppTextStyle {
 
   static TextStyle buttonText(double width, Color textColor) {
     return TextStyle(
-      fontSize: width * 1.3,
+      fontSize: width * 0.8,
       letterSpacing: 2,
       color: textColor,
       fontWeight: FontWeight.w600,

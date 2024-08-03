@@ -34,25 +34,25 @@ class ExamPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SvgPicture.asset(
-                "assets/images/welcome.svg",
-                height: valueResult / 2,
-                width: double.infinity,
+                "assets/images/history_hitit.svg",
+                height: 110,
+                width: 100,
                 fit: BoxFit.cover,
               ),
               Text(
-                "Lorem Ipsum It is a long established fact that a reader will be distracted ?",
+                "YuKarıdaki resim hangi döneme aittir?",
                 style: AppTextStyle.quizQuestionText(valueTextSize),
               ),
-              SizedboxRatio.sizedBox1quarter(valueResult),
+              SizedboxRatio.sizedBoxMinScale(valueResult),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
                     children: [
-                      QuizChoiceButton(btnText: "Adana"),
-                      QuizChoiceButton(btnText: "Bursa"),
-                      QuizChoiceButton(btnText: "Ceyhan"),
-                      QuizChoiceButton(btnText: "Denizli"),
+                      QuizChoiceButton(btnText: "Bizans"),
+                      QuizChoiceButton(btnText: "Amerika"),
+                      QuizChoiceButton(btnText: "Hitit"),
+                      QuizChoiceButton(btnText: "Antakya"),
                     ],
                   ),
                 ],
@@ -67,7 +67,7 @@ class ExamPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedboxRatio.sizedBoxWithScale(valueResult, 70),
+              SizedboxRatio.sizedBoxWithScale(valueResult, 10),
             ],
           ),
         ),
