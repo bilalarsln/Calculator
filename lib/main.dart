@@ -1,4 +1,4 @@
-import 'package:first_app/screens/exam_page.dart';
+import 'package:first_app/screens/announcements/announcementList.dart';
 import 'package:first_app/screens/loginScreen.dart';
 import 'package:first_app/screens/main_page.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +24,9 @@ class DriverApp extends StatelessWidget {
         ),
       ),
       routes: {
-        "/Login": (context) => const MainPage(),
-        "/MainPage": (context) => const LoginScreen(),
-        "/Exam": (context) => const ExamPage(),
+        "/MainPage": (context) => const MainPage(),
+        "/Announcements": (context) => const AnnouncementList(),
+        "/Login": (context) => const LoginScreen(),
       },
     );
   }
@@ -43,16 +43,16 @@ class PersistenBottomNavBarDemo extends StatelessWidget {
           ),
         ),
         PersistentTabConfig(
-          screen: const SafeArea(child: LoginScreen()),
+          screen: const SafeArea(child: AnnouncementList()),
           item: ItemConfig(
-            icon: const Icon(Icons.message),
-            title: "MainPage",
+            icon: const Icon(Icons.notifications),
+            title: "Announcements",
           ),
         ),
         PersistentTabConfig(
           screen: const SafeArea(child: LoginScreen()),
           item: ItemConfig(
-            icon: const Icon(Icons.settings),
+            icon: const Icon(Icons.send),
             title: "Giriş",
           ),
         ),

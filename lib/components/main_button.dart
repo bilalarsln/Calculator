@@ -17,7 +17,7 @@ class MainButton extends StatelessWidget {
   final double btnPaddingVertical;
   final double btnPaddingHorizontal;
   final bool isRow;
-  final Function() onPressed;
+  final VoidCallback onPressed;
 
   const MainButton({
     super.key,
@@ -56,9 +56,13 @@ class MainButton extends StatelessWidget {
                 const SizedBox(
                   width: 5,
                 ),
-                Text(
-                  btnText,
-                  style: AppTextStyle.buttonText(valueTextSize, btnTextColor),
+                Flexible(
+                  child: Text(
+                    btnText,
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
+                    style: AppTextStyle.buttonText(valueTextSize, btnTextColor),
+                  ),
                 ),
               ],
             )
@@ -70,9 +74,14 @@ class MainButton extends StatelessWidget {
                 const SizedBox(
                   height: 5,
                 ),
-                Text(
-                  btnText,
-                  style: AppTextStyle.buttonText(valueTextSize, btnTextColor),
+                Flexible(
+                  child: Text(
+                    btnText,
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
+                    style: AppTextStyle.miniDefaultDescriptionText(
+                        valueTextSize, btnTextColor),
+                  ),
                 ),
               ],
             );

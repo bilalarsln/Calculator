@@ -1,25 +1,25 @@
 import 'package:first_app/constant/navigate_to.dart';
-import 'package:first_app/screens/exams/exam_page.dart';
+import 'package:first_app/screens/informations/importandInfo.dart';
 import 'package:flutter/material.dart';
 
-class TestList extends StatefulWidget {
-  const TestList({super.key});
+class SourcesList extends StatefulWidget {
+  const SourcesList({super.key});
 
   @override
-  State<TestList> createState() => _TestListState();
+  State<SourcesList> createState() => _SourcesListState();
 }
 
-class _TestListState extends State<TestList> {
+class _SourcesListState extends State<SourcesList> {
   List questions = [
-    "Test 1",
-    "Test 2",
-    "Test 3",
-    "Test 4",
-    "Test 5",
-    "Test 6",
-    "Test 7",
-    "Test 8",
-    "Test 9",
+    "Source 1",
+    "Source 2",
+    "Source 3",
+    "Source 4",
+    "Source 5",
+    "Source 6",
+    "Source 7",
+    "Source 8",
+    "Source 9",
   ];
   @override
   Widget build(BuildContext context) {
@@ -27,11 +27,11 @@ class _TestListState extends State<TestList> {
       body: ListView.separated(
           itemBuilder: (context, index) => ListTile(
                 title: Text(questions[index]),
-                subtitle: Text("Test adı : $index"),
+                subtitle: Text("Source type : $index"),
                 trailing: const Icon(Icons.chevron_right),
                 tileColor: const Color.fromARGB(255, 238, 238, 238),
                 onTap: () {
-                  navigateTo(context, ExamPage());
+                  print("kaynak görüntüleniyor");
                 },
               ),
           separatorBuilder: (context, index) => const Divider(),

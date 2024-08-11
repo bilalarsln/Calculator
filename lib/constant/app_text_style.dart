@@ -27,10 +27,10 @@ class AppTextStyle {
     );
   }
 
-  static TextStyle miniDefaultDescriptionText(double width) {
+  static TextStyle miniDefaultDescriptionText(double width, Color textColor) {
     return TextStyle(
       fontSize: width,
-      color: Colors.black,
+      color: textColor,
     );
   }
 
